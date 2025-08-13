@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:offline_first_app/features/deleted_data/screens/deleted_data_screen.dart';
 import 'package:offline_first_app/features/homepage/widgets/info_lable_widget.dart';
 import 'package:offline_first_app/features/homepage/widgets/items_number_row_widget.dart';
 import 'package:offline_first_app/features/homepage/widgets/price_row_widget.dart';
-import 'package:offline_first_app/features/manage_expenses/screens/manage_expenses.dart';
+import 'package:offline_first_app/features/manage_expenses/screens/manage_expenses_screen.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -32,7 +33,8 @@ class _HomepageState extends State<Homepage> {
               color: Colors.white,
             ),
             onPressed: () {
-              // TODO:
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => DeletedItemsScreen()));
             },
           ),
 
